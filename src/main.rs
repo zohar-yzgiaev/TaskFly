@@ -58,22 +58,46 @@ fn main() -> Result<()> {
 
     match opt {
         TaskFly::Add { level, command } => {
-            // TODO: Handle adding task
-            println!("Adding task with command '{}' and urgency level '{:?}'", command, level);
+            add_task(level, command)?;
         }
         TaskFly::List => {
-            // TODO: Handle listing tasks
-            println!("Listing tasks");
+            list_tasks()?;
         }
         TaskFly::Remove { command } => {
-            // TODO: Handle removing task
-            println!("Removing task with command '{}'", command);
+            remove_task(command)?;
         }
         TaskFly::Edit { command, level } => {
-            // TODO: Handle editing task
-            println!("Editing task with command '{}' to urgency level '{:?}'", command, level);
+            edit_task(command, level)?;
         }
     }
+
+    Ok(())
+}
+
+fn add_task(level: UrgencyLevel, command: String) -> Result<()> {
+    // TODO: Implement the logic to add a task
+    println!("Adding task with command '{}' and urgency level '{:?}'", command, level);
+
+    Ok(())
+}
+
+fn list_tasks() -> Result<()> {
+    // TODO: Implement the logic to list tasks
+    println!("Listing tasks");
+
+    Ok(())
+}
+
+fn remove_task(command: String) -> Result<()> {
+    // TODO: Implement the logic to remove a task
+    println!("Removing task with command '{}'", command);
+
+    Ok(())
+}
+
+fn edit_task(command: String, level: UrgencyLevel) -> Result<()> {
+    // TODO: Implement the logic to edit a task
+    println!("Editing task with command '{}' to urgency level '{:?}'", command, level);
 
     Ok(())
 }
