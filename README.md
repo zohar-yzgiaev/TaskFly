@@ -1,10 +1,10 @@
 # 🚀 TaskFly - The Fun Job Scheduler Daemon
 
-No more struggling with cryptic cron syntax or limited job control. TaskFly lets you schedule tasks according to their urgency level, represented by fun emojis! Experience the power and flexibility of a robust job scheduler with the simplicity and user-friendliness of emojis.
+Experience a whole new way of scheduling tasks with TaskFly. Representing tasks' urgency with emojis, TaskFly not only makes job scheduling fun but also intuitive and user-friendly. Now with an added ability to schedule tasks over HTTP, TaskFly broadens its accessibility to other languages and systems. 
 
 ## 🤔 What is TaskFly?
 
-TaskFly is a daemon designed to make task scheduling easy, flexible, and fun. Instead of grappling with complex scheduling syntax, you simply assign your tasks an urgency level using one of four emojis. TaskFly takes care of the rest, ensuring your tasks are executed at the right time based on their urgency, all while providing robust control and monitoring capabilities.
+TaskFly is a daemon designed to schedule tasks according to their urgency level, symbolized by one of four emojis. It simplifies the task scheduling experience while ensuring tasks are carried out at the right time based on their urgency. With an HTTP interface for easy integration with your existing services, TaskFly also provides advanced control and monitoring capabilities for your scheduled tasks.
 
 Here are the available urgency levels:
 
@@ -13,7 +13,15 @@ Here are the available urgency levels:
 - 🚲 Daily Cruise: Tasks that need to be executed by the end of the day.
 - 🐢 Turtle Pace: Tasks that can wait to be executed sometime this week.
 
-With TaskFly, you're not just scheduling tasks - you're controlling a powerful, flexible daemon that handles job dependencies, manages job execution environments, provides direct feedback on job statuses, and offers a centralized dashboard for monitoring all your tasks.
+With its layered architecture, TaskFly is more than just a scheduler - it's a powerful, flexible daemon with a user-friendly interface that handles job dependencies, manages execution environments, offers direct feedback on job statuses, and provides a centralized platform for task monitoring.
+
+## 🏛️ Architecture
+
+TaskFly follows a three-tiered architecture:
+
+1. **Daemon Layer**: The overarching layer that manages the HTTP Service and Task Scheduler layers. 
+2. **HTTP Service Layer**: Responsible for handling incoming HTTP requests and forwarding them to the Task Scheduler.
+3. **Task Scheduler Layer**: Schedules and executes tasks according to their urgency level.
 
 
 ## 🔧 Installation
