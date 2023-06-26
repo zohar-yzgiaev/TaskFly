@@ -107,21 +107,21 @@ impl TaskManager {
 #[derive(StructOpt, Debug)]
 #[structopt(name = "taskfly")]
 pub enum TaskFly {
-    #[structopt(name = "Add")]
+    #[structopt(name = "add")]
     Add {
         #[structopt(name = "UrgencyLevel")]
         level: UrgencyLevel,
         #[structopt(name = "Command")]
         command: String,
     },
-    #[structopt(name = "List")]
+    #[structopt(name = "list")]
     List,
     #[structopt(name = "Remove")]
     Remove {
         #[structopt(name = "Command")]
         command: String,
     },
-    #[structopt(name = "Edit")]
+    #[structopt(name = "edit")]
     Edit {
         #[structopt(name = "Command")]
         command: String,

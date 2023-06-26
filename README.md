@@ -33,7 +33,7 @@ TaskFly follows a three-tiered architecture:
 Adding a task is as simple as this:
 
 ```bash
-$ taskfly add "Blast Off 🚀" "/path/to/your/script.sh"
+$ taskfly add 🚀 "/path/to/your/script.sh"
 ```
 
 And you can list your tasks with:
@@ -50,7 +50,7 @@ $ taskfly remove "Your task description here"
 
 Want to change the urgency of a task? Here you go:
 ```bash
-$ taskfly edit "Your task description here" "Turtle Pace 🐢"
+$ taskfly edit "Your task description here" 🐢
 ```
 
 And, of course, you can always ask TaskFly for help:
